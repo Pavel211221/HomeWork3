@@ -14,11 +14,22 @@ public class MainClass5 {
 
         /**5. С помощью цикла вывести информацию только о сотрудниках старше 40 лет.
          * */
+//ВАРИАНТ1
+//        for (int i = 0; i < employees1.length; i++) {
+//            if (employees1[i].getAge() > 40)
+//            {
+//                System.out.println(employees1[i]);
+//            }
+//        }
+//    }
+//}
 
+
+//ВАПИАНТ2
         for (int i = 0; i < employees1.length; i++) {
             if (employees1[i].getAge() > 40)
             {
-                System.out.println(employees1[i]);
+                employees1[i].printFullInfo();
             }
         }
     }

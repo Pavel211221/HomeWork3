@@ -28,15 +28,22 @@ public class Employees {
         return age;
     }
 
-    @Override
-    public String toString() {
-        return "Employees{" +
-                "name='" + name + '\'' +
-                ", post='" + post + '\'' +
-                ", email='" + email + '\'' +
-                ", telethon='" + telethon + '\'' +
-                ", salary=" + salary +
-                ", age=" + age +
-                '}';
-    }
-}
+//ВАРИАНТ1
+//    @Override
+//    public String toString() {
+//        return "Employees{" +
+//                "name='" + name + '\'' +
+//                ", post='" + post + '\'' +
+//                ", email='" + email + '\'' +
+//                ", telethon='" + telethon + '\'' +
+//                ", salary=" + salary +
+//                ", age=" + age +
+//                '}';
+//    }
+//}
+
+//ВАРИАНТ2
+
+public void printFullInfo(){
+    System.out.println("fio: " + name + " post: " + post + " email: " + email +" telethon: " + telethon + " salary: " + salary + " age: " + age);
+}}
