@@ -1,31 +1,19 @@
 package HomeWork6.Animal;
 
 public class Dog extends Animal {
+    private static int count;
+
+    public Dog(String name, int maxRunDistance, int maxSwimDistance) {
+        super(name, "Собака", maxRunDistance, maxSwimDistance);
+        count++;
+    }
+
     public Dog(String name) {
-        super(name);
+        super(name, "Собака", 500, 30);
+        count++;
     }
 
-    /* У каждого животного есть ограничения на действия (бег: кот 200 м., собака 500 м.; плавание: кот не умеет плавать, собака 10 м.).
-     * */
-    @Override
-    public void run(int distance) {
-        if (0 <= distance && distance <= 500){
-            System.out.println(name + " пробежал " + distance + " метров ");
-        } else if (distance > 500){
-            System.out.println(name + " пробежит только 500 метров!!!");
-        }else {
-            System.out.println("Введите положительное значение");
-        }
-    }
-
-    @Override
-    public void swim(int distance) {
-        if (0 <= distance && distance <= 10){
-            System.out.println(name + " проплыл " + distance + " метров ");
-        } else if (distance > 10){
-            System.out.println(name + " проплывет только 10 метров!!!");
-        }else {
-            System.out.println("Введите положительное значение");
-        }
+    public static int getCount() {
+        return count;
     }
 }
